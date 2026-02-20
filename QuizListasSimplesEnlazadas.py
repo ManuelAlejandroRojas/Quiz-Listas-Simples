@@ -131,6 +131,9 @@ class ListaSE:
 
 Salir_Programa = -1
 
+Lista_Cedula = ListaSE
+
+
 while Salir_Programa == -1:
     
     
@@ -140,7 +143,7 @@ while Salir_Programa == -1:
     print("\n1. Asignación de habitaciones")
     print("2. Salida de habitaciones")
     print("3. Consultas vigentes por huésped")
-        
+    SelectMenu = int(input("Numero: "))
     
     
     match SelectMenu:
@@ -148,9 +151,9 @@ while Salir_Programa == -1:
             print("\n--->ASIGNACIÓN DE HABITACIONES<---")
         
             Cedula_Cliente = str(input("Ingrese el número de cédula del huésped: "))
-            ListaSE.agregarInicio(Cedula_Cliente)
+            Lista_Cedula.agregarInicio( Lista_Cedula , Cedula_Cliente)
             
-            ListaSE.imprimir
+            Lista_Cedula.imprimir
             break
         
         
